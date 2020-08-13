@@ -51,7 +51,6 @@ header {
   margin-top: 15px;
   display: inline-block;
   padding: 0px 20px;
-
 }
 
 .nav_links li a {
@@ -164,11 +163,24 @@ a:hover {
   text-decoration: none;
 }
 
-#exam {
+.minute {
   margin-bottom: -1px;
   margin-left: 20px;
   font-size: small;
   color: rgb(91, 121, 145);
+  float: left;
+}
+
+.category, .date {
+  margin-bottom: -1px;
+  margin-left: 20px;
+  font-size: small;
+  color: rgb(91, 121, 145);
+}
+
+#date {
+  text-align: right;
+  margin-right: 20px;
 }
 
 /* Footer */
