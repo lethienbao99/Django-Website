@@ -1,0 +1,182 @@
+/* Show in default resolution screen*/
+#container {
+  width: 1500px;
+  position: relative;
+  margin: 0 auto;
+  line-height: 1.4em;
+}
+
+/* If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */
+@media only screen and (max-width: 479px) {
+  #container {
+    width: 100%;
+  }
+}
+
+body {
+  color: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #24252a;
+}
+/* Navbar CSS */
+
+li,
+a,
+button {
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  background-color: #16171a;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 10%;
+}
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 0px 20px;
+
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: aqua;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(3, 56, 70);
+}
+
+/* Dropdown menu */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #454747;
+  min-width: 150px;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  color: aqua;
+  border-radius: 10px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* List Product */
+
+div.title {
+  margin-top: 100px;
+  font-size: 100pxpx;
+  text-align: center;
+}
+
+hr {
+  background-color: aliceblue;
+  width: 100px;
+}
+
+div.main {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  justify-content: center;
+}
+
+div.item {
+  margin: 10px;
+  border: rgb(98, 102, 102) solid 1px;
+  border-radius: 10px;
+  width: 20%;
+  height: 400px;
+  overflow: hidden;
+}
+
+div.img {
+  border: #24252a solid 1px;
+  border-radius: 10px;
+  margin: 10px;
+  margin-left: 23px;
+  width: 85%;
+  height: 60%;
+  overflow: hidden;
+}
+
+div.desciption {
+  width: 100%;
+  height: 20%;
+}
+
+p#textdesciption {
+  height: 100%;
+  margin: 10px;
+  text-align: center;
+}
+
+a:hover {
+  color: aqua;
+  text-decoration: none;
+}
+
+#exam {
+  margin-bottom: -1px;
+  margin-left: 20px;
+  font-size: small;
+  color: rgb(91, 121, 145);
+}
+
+/* Footer */
+footer {
+  position: sticky;
+  top: 100%;
+  background: #16171a;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
