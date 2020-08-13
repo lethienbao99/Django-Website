@@ -1,0 +1,26 @@
+Movie Detail
+<p>name: {{ movie.name }}</p>
+<p>photo: {{ movie.photo }}</p>
+<p>minute: {{ movie.minute }}p</p>
+<p>des: {{ movie.description }}</p>
+<p>date: {{ movie.date }}</p>
+
+<p>categories:
+{% for category in movie.categories.all %}
+
+  {{ category.name }}
+
+{% endfor %}
+</p>
+
+<p>actors:
+{% for actor in movie.actors.all %}
+
+{{ actor.name }}
+
+{% endfor %}
+</p>
+
+<p>slug:
+  {{ movie.slug }}
+</p>
