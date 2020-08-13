@@ -17,303 +17,46 @@
 </div>
 
 <div id="container" class="main">
-    <div class="item">
-        <div class="img">
-            <a href="#">
-            <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
-             width="100%" height="100%">
-            </a>
-        </div>
-        <div class="desciption">
-                <p id="textdesciption">
-                    <a href="#">
-                        PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
-                     </a>
-                </p>
-        </div>
-        <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-        <p id="exam">120 phút</p>
-    </div>
+    {% for movie in movie_list %}
 
     <div class="item">
         <div class="img">
-            <a href="#">
-            <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
-             width="100%" height="100%">
-            </a>
-        </div>
-        <div class="desciption">
-                <p id="textdesciption">
-                    <a href="#">
-                        PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
-                     </a>
-                </p>
-        </div>
-        <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-        <p id="exam">120 phút</p>
-    </div>
+            <a href="/movie/{{ movie.slug }}">
 
-    <div class="item">
-        <div class="img">
-            <a href="#">
-            <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
+            {% if movie.photo %}
+            <img src="{{ movie.photo}}"
+            alt="{{ movie.name }}"
+            width="100%" height="100%">
+            {% elif movie.photo == "" %}
+            <img src="https://image.freepik.com/free-vector/error-404-found-glitch-effect_8024-5.jpg"
              width="100%" height="100%">
-            </a>
-        </div>
-        <div class="desciption">
-                <p id="textdesciption">
-                    <a href="#">
-                        PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
-                     </a>
-                </p>
-        </div>
-        <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-        <p id="exam">120 phút</p>
-    </div>
+            {% endif %}
 
-    <div class="item">
-        <div class="img">
-            <a href="#">
-            <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
-             width="100%" height="100%">
-            </a>
-        </div>
-        <div class="desciption">
-                <p id="textdesciption">
-                    <a href="#">
-                        PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
-                     </a>
-                </p>
-        </div>
-        <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-        <p id="exam">120 phút</p>
-    </div>
 
-    <div class="item">
-        <div class="img">
-            <a href="#">
-            <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
-             width="100%" height="100%">
             </a>
         </div>
         <div class="desciption">
                 <p id="textdesciption">
-                    <a href="#">
-                        PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
+                    <a href="/movie/{{ movie.slug }}">
+                        {{ movie.name }}
                      </a>
                 </p>
         </div>
-        <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-        <p id="exam">120 phút</p>
-    </div>
+        <p class="category">
+            {% for category in movie.categories.all %}
 
-    <div class="item">
-        <div class="img">
-            <a href="#">
-            <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
-             width="100%" height="100%">
-            </a>
-        </div>
-        <div class="desciption">
-                <p id="textdesciption">
-                    <a href="#">
-                        PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
-                     </a>
-                </p>
-        </div>
-        <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-        <p id="exam">120 phút</p>
-    </div>
+            {{ category.name }},
 
-    <div class="item">
-        <div class="img">
-            <a href="#">
-            <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
-             width="100%" height="100%">
-            </a>
-        </div>
-        <div class="desciption">
-                <p id="textdesciption">
-                    <a href="#">
-                        PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
-                     </a>
-                </p>
-        </div>
-        <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-        <p id="exam">120 phút</p>
-    </div>
+          {% endfor %}
 
-    <div class="item">
-        <div class="img">
-            <a href="#">
-            <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
-             width="100%" height="100%">
-            </a>
-        </div>
-        <div class="desciption">
-                <p id="textdesciption">
-                    <a href="#">
-                        PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
-                     </a>
-                </p>
-        </div>
-        <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-        <p id="exam">120 phút</p>
+        </p>
+        <p class="minute">{{ movie.minute }}</p>
+        <p class="date" id="date">{{ movie.date }}</p>
     </div>
+    {% endfor %}
 </div>
 </section>
 
-<section>
-    <div class="title">
-        <h1>Title</h1>
-        <hr>
-    </div>
 
-    <div id="container" class="main">
-        <div class="item">
-            <div class="img">
-                <a href="#">
-                <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
-                 width="100%" height="100%">
-                </a>
-            </div>
-            <div class="desciption">
-                    <p id="textdesciption">
-                        <a href="#">
-                            PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
-                         </a>
-                    </p>
-            </div>
-            <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-            <p id="exam">120 phút</p>
-        </div>
-
-        <div class="item">
-            <div class="img">
-                <a href="#">
-                <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
-                 width="100%" height="100%">
-                </a>
-            </div>
-            <div class="desciption">
-                    <p id="textdesciption">
-                        <a href="#">
-                            PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
-                         </a>
-                    </p>
-            </div>
-            <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-            <p id="exam">120 phút</p>
-        </div>
-
-        <div class="item">
-            <div class="img">
-                <a href="#">
-                <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
-                 width="100%" height="100%">
-                </a>
-            </div>
-            <div class="desciption">
-                    <p id="textdesciption">
-                        <a href="#">
-                            PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
-                         </a>
-                    </p>
-            </div>
-            <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-            <p id="exam">120 phút</p>
-        </div>
-
-        <div class="item">
-            <div class="img">
-                <a href="#">
-                <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
-                 width="100%" height="100%">
-                </a>
-            </div>
-            <div class="desciption">
-                    <p id="textdesciption">
-                        <a href="#">
-                            PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
-                         </a>
-                    </p>
-            </div>
-            <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-            <p id="exam">120 phút</p>
-        </div>
-
-        <div class="item">
-            <div class="img">
-                <a href="#">
-                <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
-                 width="100%" height="100%">
-                </a>
-            </div>
-            <div class="desciption">
-                    <p id="textdesciption">
-                        <a href="#">
-                            PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
-                        </a>
-                    </p>
-            </div>
-            <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-            <p id="exam">120 phút</p>
-        </div>
-
-        <div class="item">
-            <div class="img">
-                <a href="#">
-                <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
-                 width="100%" height="100%">
-                </a>
-            </div>
-            <div class="desciption">
-                    <p id="textdesciption">
-                        <a href="#">
-                            PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
-                         </a>
-                    </p>
-            </div>
-            <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-            <p id="exam">120 phút</p>
-        </div>
-
-        <div class="item">
-            <div class="img">
-                <a href="#">
-                <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
-                 width="100%" height="100%">
-                </a>
-            </div>
-            <div class="desciption">
-                    <p id="textdesciption">
-                        <a href="#">
-                            PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
-                         </a>
-                    </p>
-            </div>
-            <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-            <p id="exam">120 phút</p>
-        </div>
-
-        <div class="item">
-            <div class="img">
-                <a href="#">
-                <img src="https://gamek.mediacdn.vn/133514250583805952/2020/5/6/-15887585895041819860279.jpg"
-                 width="100%" height="100%">
-                </a>
-            </div>
-            <div class="desciption">
-                    <p id="textdesciption">
-                        <a href="#">
-                            PHIM BỘ MỚI CẬP NHẬT PHIM BỘ MỚI CẬP NHẬT
-                         </a>
-                    </p>
-            </div>
-            <p id="exam">Thẻ loại: dsadas,đâsd sadasda, dsad</p>
-            <p id="exam">120 phút</p>
-        </div>
-    </div>
-    </section>
 
 {% endblock content %}

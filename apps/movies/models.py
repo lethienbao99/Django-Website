@@ -21,10 +21,11 @@ class Category(models.Model):
 
 class Movie(models.Model):
     name = models.CharField(max_length=150)
-    photo = models.TextField(max_length=500)
+    photo = models.URLField(default="", blank=True)
     minute = models.CharField(max_length=50)
-    description = models.TextField(max_length=500)
-    date = models.DateField(auto_now=True)
+    video = models.URLField(default="", blank=True)
+    description = models.TextField(max_length=500, blank=True)
+    date = models.DateTimeField(auto_now_add=True)
     categories = models.ManyToManyField(Category)
     actors = models.ManyToManyField(Actor)
     slug = models.SlugField(default="", unique=True)
