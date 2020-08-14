@@ -135,6 +135,17 @@ div.item {
   width: 20%;
   height: 400px;
   overflow: hidden;
+  -webkit-transition: 0.25s;
+  transition: 0.5s;
+}
+
+div.item:hover {
+  box-shadow: 0 6px 10px -1px aqua;
+  border: rgb(73, 199, 199) solid 1px;
+  -webkit-transform: translateY(-1em);
+  transform: translateY(-0.5em);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 div.img {
@@ -171,7 +182,8 @@ a:hover {
   float: left;
 }
 
-.category, .date {
+.category,
+.date {
   margin-bottom: -1px;
   margin-left: 20px;
   font-size: small;
