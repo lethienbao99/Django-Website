@@ -1,3 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+{{ movie.name }}
+{% endblock title %}
+
+{% block cssblock %}
+<link rel="stylesheet" href="{% static 'css/movies/style.css' %}">
+{% endblock cssblock %}
+
+{% block content %}
+
 Movie Detail
 <p>name: {{ movie.name }}</p>
 <p>photo: {{ movie.photo }}</p>
@@ -24,3 +37,5 @@ Movie Detail
 <p>slug:
   {{ movie.slug }}
 </p>
+
+{% endblock content %}
