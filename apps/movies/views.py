@@ -18,7 +18,7 @@ class MovieDetailView(DetailView):
 
 class MovieListView(ListView):
     model = Movie
-    queryset = Movie.objects.order_by("year")
+    queryset = Movie.objects.order_by("date")
     context_object_name = "movie-list"
     template_name = "movies/movie-list.html"
     paginate_by = 10
