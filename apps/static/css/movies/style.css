@@ -5,6 +5,13 @@
   max-width: 100%;
 }
 
+.container{
+  padding-left: 150px;
+  position: relative;
+  left: 0;
+  width: 100%;
+}
+
 .MENU ul{
   padding: 15px 25px;
 }
@@ -20,19 +27,16 @@
   border-bottom: 1px solid rgb(248, 246, 246);
   transition: all 0.4s;
 }
-
-.container{
-  padding-left: 150px;
-  position: relative;
-  left: 0;
-  width: 100%;
-  
+.MENU ul li a:hover{
+  cursor: pointer !important; 
+  transition: all 0.4s;
 }
+
 .MENU{
   position: absolute;
   height: 100%;
-  background-color: rgb(25, 27, 27);
-  width: 150px;
+  background-color: rgb(137, 151, 151);
+  width: 200px;
   left: 0;
 }
 
@@ -42,43 +46,50 @@
   padding-right: -100px !important;
 }
 
-.item1{
-    margin: 20px;  
-    width: 400px;
-    height: 100px;
-    overflow: hidden;
-    display: flex;  
+.main-video{
+  width: 1000px !important;
+  height: 500px;
+  text-align: center;
 }
 
-.picture1{
-  width: 200px;
-  height: 100px;
+.item1{
+    margin: 20px;  
+    width: 350px;
+    height: 100px;
+    overflow: hidden;
+    display: flex; 
 }
 
 .title ,  .viewsCount{
   padding: 5px;
+  font-size: 15px;
+}
+
+.picture1{
+  min-width: 200px !important;
+  height: 100px;
+  position: relative;
 }
 
 .content img{
-  width: 450px;
+  width: 600px;
   height: 300px;
-  margin-left: 100px;
+  padding-left: 25%;
 }
 
 /*movie list*/
 .movielist-item img{
-  width: 100%; 
-  height: 100px;
+  width: 300px; 
+  height: 200px;
   display: block;
   margin: 20px auto;
 }
-.movielist-item img:hover{
-  border: 1px solid rgb(244, 252, 252);
-}
+
 
 .movielist-item h4{
   transition: all .2s;
   margin: 0; 
+  text-align: center;
 }
 .movielist-item h4:hover{
   color:#375dd6;
