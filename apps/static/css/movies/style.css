@@ -1,5 +1,167 @@
-p {
-  color: red;
+*{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  max-width: 100%;
 }
 
+.MENU ul{
+  padding: 15px 25px;
+}
 
+.MENU ul li {
+  text-decoration: none;
+  list-style-type: none;
+  line-height: 3em;
+}
+
+.MENU ul li a{
+  display: block;
+  border-bottom: 1px solid rgb(248, 246, 246);
+  transition: all 0.4s;
+}
+
+.container{
+  padding-left: 150px;
+  position: relative;
+  left: 0;
+  width: 100%;
+  
+}
+.MENU{
+  position: absolute;
+  height: 100%;
+  background-color: rgb(25, 27, 27);
+  width: 150px;
+  left: 0;
+}
+
+.content{
+  padding: 1em 5em;
+  width: 100% !important;
+  padding-right: -100px !important;
+}
+
+.item1{
+    margin: 20px;  
+    width: 400px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;  
+}
+
+.picture1{
+  width: 200px;
+  height: 100px;
+}
+
+.title ,  .viewsCount{
+  padding: 5px;
+}
+
+.content img{
+  width: 450px;
+  height: 300px;
+  margin-left: 100px;
+}
+
+/*movie list*/
+.movielist-item img{
+  width: 100%; 
+  height: 100px;
+  display: block;
+  margin: 20px auto;
+}
+.movielist-item img:hover{
+  border: 1px solid rgb(244, 252, 252);
+}
+
+.movielist-item h4{
+  transition: all .2s;
+  margin: 0; 
+}
+.movielist-item h4:hover{
+  color:#375dd6;
+}
+
+.section-title span:before {
+  content: '';
+  background: rgb(10, 10, 10);
+  border-radius: 100%;
+  position: absolute;
+  padding: 6px;
+  border: 1px solid rgba(255,255,255,.08);
+  margin-left: 0px;
+  top: -5px;
+  right: -16px;
+}
+.section-title span:after {
+  content: '';
+  background: rgb(10, 10, 10);
+  border-radius: 100%;
+  position: absolute;
+  padding: 4px;
+  border: 1px solid rgba(255,255,255,.08);
+  margin-left: 12px;
+  top: -4px;
+  right: -26px;
+}
+.section-title {
+  font-size: 16px;
+  line-height: 4px;
+  display: block;
+  margin: 15px  10px;
+  position: relative;
+  text-transform: uppercase;
+  border-top: 1px solid rgba(255,255,255,.08);
+  width: 450px;
+}
+
+.recommended span:before {
+  content: '';
+  background: rgba(250, 243, 243, 0.918);
+  border-radius: 100%;
+  position: absolute;
+  padding: 6px;
+  border: 1px solid rgba(124, 117, 117, 0.918);
+  margin-left: 0px;
+  top: 50px;
+  right: -16px;
+}
+.recommended span:after {
+  content: '';
+  background: rgba(250, 243, 243, 0.918);
+  border-radius: 100%;
+  position: absolute;
+  padding: 4px;
+  border: 1px solid rgba(83, 79, 79, 0.918);
+  margin-left: 12px;
+  top: 50px;
+  right: -26px;
+}
+.recommended {
+  font-size: 16px;
+  line-height: 4px;
+  display: block;
+  margin: 15px 10px;
+  position: relative;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(250, 243, 243, 0.918);
+  width: 100%;
+  margin-top: 100px !important;
+}
+
+.aside1{
+  width: 400px;
+  padding: 5px 10px;
+}
+
+.sidebar{
+  width: 500px !important;
+  max-width: 100% !important;
+}
+
+.noi-dung{
+  margin-left: 150px;
+  
+}
